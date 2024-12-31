@@ -1,0 +1,887 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+	font-family: "Poppins", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	scroll-padding-top: 2rem;
+	scroll-behavior: smooth;
+}
+/* Variables */
+:root {
+	--primary-color: #009876;
+	--natural-color-900: #020307;
+	--natural-color-100: #fff;
+
+	--fs-300: 1.7rem;
+	--fs-400: 2.4rem;
+	--fs-600: 3rem;
+
+	--fs-home-text-h1: var(--fs-600);
+}
+@media (max-width: 774px) {
+	:root {
+		--fs-home-text-h1: var(--fs-400);
+	}
+}
+@media (max-width: 472px) {
+	:root {
+		--fs-home-text-h1: var(--fs-300);
+	}
+}
+
+/* custom scroll  */
+html::-webkit-scrollbar {
+	width: 0.5rem;
+	background: #fff;
+}
+html::-webkit-scrollbar-thumb {
+	background-color: #009876;
+	border-radius: 5rem;
+}
+
+body {
+	background: #fff;
+	color: #020307;
+}
+
+header {
+	position:fixed;
+	width: 100%;
+	top: 0;
+	right: 0;
+	z-index: 1000;
+	display: flex;
+	align-items:flex-start;
+	justify-content: space-between;
+	padding: 0px 100px;
+	transition: 0.5s;
+}
+
+/* Nav */
+.logo {
+	padding-top: 0%;
+	display:flex;
+	column-gap: 0.5rem;
+	height: 130px;
+	width:200px	;
+}
+
+
+/* Remove overflow: hidden on navbar to allow dropdown visibility */
+.navbar {
+    
+    padding: 0 50px 0 40px;
+	height: 60px;
+	width: 1700px;
+	max-width: 2000p;
+    background-color:none;
+    position: relative;
+	display:flex;
+	margin: right 300px;
+	column-gap: 2rem;
+
+	}
+
+.navbar li {
+	
+	float:right;
+	position:relative;
+	
+			
+}
+
+.navbar a {
+	font-size: 1rem;
+	font-weight: 500;
+	color: #009876;
+}
+
+
+.navbar a:hover::after,
+.navbar .home-active::after {
+	width: 100%;
+}
+
+
+
+
+
+#menu-icon {
+	font-size: 24px;
+	cursor: pointer;
+	z-index: 1000001;
+	display: none;
+}
+
+
+.btn {
+			position: relative; /* Position relative for the pseudo-element */
+            display:inline-flex;
+            background-color: #009876; /* Button background color */
+            color: white;
+            padding: 4px 24px 4px 24px;
+            text-decoration: none;
+			box-sizing: border-box;
+			transform: none;
+			outline: rgb(255,0,0)dashed 0.8px;
+            overflow: hidden; /* Hide overflow to keep the star contained */
+            transition: background-color 0.3s all; /* Smooth transition for background color */
+
+}
+.btn:hover {
+	background:white;
+	color: #020307;
+}
+
+ /* Star Animation */
+ .btn::after {
+	content: ''; 
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0); 
+	color: gold;
+	font-size: 24px; 
+	transition: transform 0.4s linear; 
+}
+
+.navbar li a {
+	display: block;
+	color: #fff;
+	padding: 14px 16px;
+	text-decoration: none;
+	position: relative;
+}
+
+.navbar li a :hover {
+	background-color: #111;
+}
+
+/* Default navbar link styles */
+.navbar li a {
+    display: block;
+    color: #fff; /* Default text color */
+    padding: 14px 16px;
+    text-decoration: none;
+    position: relative;
+}
+
+/* Hover effect */
+.navbar li a:hover {
+    background-color: #009688; /* Background color when hovering */
+    color: white; /* Text color when hovering */
+}
+
+
+
+.navbar:hover  .navbar a {
+	display: block;
+}
+
+.navbar a :hover{
+	background-color: #009876; /* Hover color */
+    color: white; /* Optional: change text color on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* General container for slideshow */
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    overflow:scroll;
+}
+
+/* Slide fading effect */
+.mySlides {
+    display: none;
+    animation: fade 1.5s ease-in-out;
+}
+
+@keyframes fade {
+    from {opacity: 0.4} 
+    to {opacity: 1}
+}
+
+/* Image styling */
+.mySlides img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Text over images */
+.home-text {
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.home-text span {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: transparent;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.home-text h1 {
+    font-size: 32px;
+    margin: 10px 0;
+    text-transform: uppercase;
+    background-color:transparent;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+
+
+
+/* Pagination dots */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #009876;
+}
+
+/* Centering pagination dots */
+.dot-container {
+    text-align: center;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .home-text h1 {
+        font-size: 24px;
+    }
+    .btn {
+        padding: 8px 16px;
+    }
+}
+
+
+
+
+
+
+.play {
+	right: 0;
+	position:fixed;
+	right: 4rem;
+	bottom: 10%;
+}
+.play .bx {
+	background: var(--natural-color-100);
+	padding: 10px;
+	font-size: 2rem;
+	border-radius: 50%;
+	border: 4px solid rgb(2, 3, 7, 0.5);
+	color: var(--primary-color);
+}
+.play .bx:hover {
+	background-color: var(--primary-color);
+	color: var(--natural-color-100);
+	transition: 0.2s all linear;
+}
+
+
+
+
+
+
+
+
+.new {
+	gap: 1rem;
+	margin-top: 2rem;
+	padding-top: 10px;
+	border-bottom: 1px solid var(--primary-color);
+	border-left: 5px solid var(--primary-color);
+}
+
+
+.slide-series {
+	position: relative;
+	overflow: hidden; /* Hide overflow to show only visible items */
+	width: 100%; /* Adjust width as needed */
+	background-color: #fff; /* Background color */
+	color: black; /* Text color */
+	padding: 20px 0; /* Padding around the container */
+	max-width: 1400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.movie-containers {
+	display: flex; /* Flexbox for horizontal layout */
+	animation:none; /* Animation for scrolling */
+}
+
+.movie-item {
+	min-width: 260px; /* Minimum width for each movie item */
+	margin: 0 10px; /* Spacing between items */
+	padding: 10px; /* Padding inside each item */
+	background-color: #fff; /* Background color for each item */
+	border-radius: 0px; /* Rounded corners */
+	text-align: center; /* Center text */
+	
+}
+
+
+
+
+
+
+
+
+
+
+/* movies  */
+.heading {
+	max-width: 1400px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.2rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	border-bottom: 1px solid var(--primary-color);
+	border-left: 5px solid var(--primary-color);
+	
+}
+.movie-container {
+	max-width: 1400px;
+	margin-right: auto;
+	margin-left: auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+	gap: 1rem;
+	margin-top: 2rem;
+}
+.box .box-img {
+	width: 100%;
+	height: 270px;
+	cursor: pointer;
+}
+.box .box-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.box .box-img img:hover {
+	transform: translateY(-10px);
+	transition: 0.2s all linear;
+}
+.box h3 {
+	font-size: 0.9rem;
+	font-weight: 500;
+}
+.box span {
+	font-size: 14px;
+}
+
+
+#about h2 {
+	max-width: 1400px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.2rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	border-bottom: 1px solid var(--primary-color);
+	border-left: 5px solid var(--primary-color);
+}
+
+/* Our Services Section */
+/* General Reset for padding and margin */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #000000;
+}
+
+/* Section Styling */
+.service {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #000000;
+}
+
+.service h2 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Individual Service Card */
+.service {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.service h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.service p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Hover Effect */
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+}
+
+.service:hover h3, 
+.service:hover p, 
+.service:hover ul li {
+    color: #000000;
+}
+
+/* List inside service */
+.service ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.service ul li {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #333;
+}
+
+/* Service Icons (Optional if you want to add icons) */
+.service::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.05);
+    top: -50px;
+    right: -50px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service:hover::before {
+    transform: scale(1.5);
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Button Style */
+.btn {
+    background-color: #009688;
+    color: rgb(227, 192, 192);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .service h2 {
+        font-size: 28px;
+    }
+
+    .service h3 {
+        font-size: 20px;
+    }
+
+    .service p {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer Map Styling */
+.footer-section iframe {
+    width: 100%; /* Ensure it fits within the section */
+    max-width: 300px; /* Optional: Set a max width for the map */
+    height: 200px; /* Adjust the height of the map */
+    border: none; /* Remove border */
+    margin-top: 15px; /* Optional: Add margin above the map */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #000000, #333); /* Sleek gradient background */
+    color: white;
+    position: relative;
+}
+
+/* Footer Container Styling */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* Footer Section Styling */
+.footer-section {
+    flex: 1;
+    padding: 20px;
+    min-width: 200px; /* Ensure layout remains responsive */
+}
+
+/* Footer Links Styling */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin: 8px 0;
+    transition: color 0.3s ease;
+}
+
+.footer-section a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.footer-section a:hover {
+    color: #00bfa5; /* Link hover effect with primary color */
+}
+
+/* Footer Section Heading */
+.footer-section h4 {
+    color: #00bfa5;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* Social Media Icons Styling */
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-media li a {
+    color: white;
+    font-size: 28px;
+    transition: color 0.3s ease;
+}
+
+.social-media li a:hover {
+    color: #00bfa5; /* Hover effect for icons */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+    padding: 10px 0; /* Add some vertical padding */
+    background-color: #000000; /* Background color */
+    margin-top: 20px; /* Add space above */
+    width: 100%; /* Ensure full width for centering */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+* footer  */
+.footer {
+	max-width: 968px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: space-between;
+}
+.social {
+	display: flex;
+	align-items: center;
+	column-gap: 0.5rem;
+}
+.social .bx {
+	background: var(--natural-color-100);
+	padding: 2px;
+	font-size: 2rem;
+	border-radius: 50%;
+	border: 4px solid rgb(2, 3, 7, 0.4);
+	color: var(--primary-color);
+}
+.social .bx:hover {
+	background-color: var(--primary-color);
+	color: var(--natural-color-100);
+	transition: 0.2s all linear;
+}
+.copyright {
+	padding: 20px;
+	text-align: center;
+	color: var(--natural-color-100);
+}
+
+/* responsive  */
+@media (max-width: 1080px) {
+	.home-text {
+		padding: 0 100px;
+	}
+}
+@media (max-width: 991px) {
+	header {
+		padding: 18px 4%;
+	}
+	section {
+		padding: 50px 4%;
+	}
+	.home-text {
+		padding: 0 4%;
+	}
+}
+@media (max-width: 774px) {
+	header {
+		padding: 12px 4%;
+	}
+	#menu-icon {
+		display: initial;
+		color: var(--natural-color-100);
+	}
+}
+@media (max-width: 472px) {
+	.newsletter form .email {
+		width: auto;
+	}
+	.footer {
+		flex-direction: column;
+		align-items: center;
+		row-gap: 1rem;
+	}
+	.container {
+		width: 100%;
+		min-height: 500px;
+	}
+	header {
+		padding: 6px 4%;
+	}
+
+	.play {
+		right: 2rem;
+		bottom: 8%;
+	}
+	.play .bx {
+		padding: 7px;
+	}
+	.movies-container {
+		grid-template-columns: repeat(auto-fit, minmax(140px, auto));
+	}
+	.box .box-img img {
+		height: 240px;
+	}
+	.coming-container img {
+		width: 100%;
+		max-height: 500px;
+	}
+}
+
+
+
+/* General Styles */
+
+  
+  /* Series Container */
+  .series-container {
+	max-width: 1400px;
+	margin: 20px auto;
+	padding: 20px;
+	background-color: white;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+  }
+  
+  /* Title */
+  .series-container h2 {
+	max-width: 1400px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.2rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	border-bottom: 1px solid var(--primary-color);
+	border-left: 5px solid var(--primary-color);
+  }
+  
+  /* Series Grid */
+  .series-grid {
+	padding-top: 60px;
+	display: flex;
+	gap: 20px;
+	flex-wrap: wrap;
+	justify-content: center;
+  }
+  
+  /* Series Item */
+  .series-item {
+	width: 250px;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	position: relative;
+	transition: transform 0.3s;
+  }
+  
+  .series-item:hover {
+	transform: scale(1.05);
+  }
+  
+  .series-item img {
+	width: auto;
+	height: 400px;
+	object-fit: cover;
+  }
+  
+  .series-info {
+	padding: 15px;
+	text-align: center;
+  }
+  
+  /* Series Info Title and Description */
+  .series-info h3 {
+	font-size: 18px;
+	margin-bottom: 10px;
+  }
+  
+  .series-info p {
+	font-size: 14px;
+	color: #777;
+  }
+  
+  /* Watch Now Button */
+  .watch-now-btn {
+	display: inline-block;
+	margin-top: 10px;
+	padding: 8px 20px;
+	background-color: transparent;
+	color: #009876;
+	border: 2px solid #009876;
+	border-radius: 5px;
+	text-decoration: none;
+	font-size: 14px;
+	transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .watch-now-btn:hover {
+	background-color: #009876;
+	color: white;
+  }
+  
+  /* View All Button */
+  .view-all-container {
+	text-align: center;
+	margin-top: 20px;
+  }
+  
+  .view-all-btn {
+	padding: 10px 20px;
+	background-color: #009876;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+  }
+  
+  .view-all-btn:hover {
+	background-color: #007a5f;
+  }
+  
+
+
+

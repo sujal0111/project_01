@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>MAGIC MOON STUDIOS</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		
+
+		  <!-- Swiper CSS -->
+		  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+		  
+	</head>
+	<body>
+		<!-- Navbar -->
+<header>
+    <a href="#home" class="logo"><img src="C:\Users\Manish Kumar Yadav\OneDrive\Desktop\project 01\logo.png" alt="magic moon studios"></a>
+   
+
+    <!-- menu -->
+	<ul><li><a href="#home"></a></li></ul>
+    <ul class="navbar">
+        <li><a href="#home" class="home-active" id="home">HOME</a></li>
+        <li><a href="#new-release">NEW RELEASE</a></li>
+        <li><a href="#series">SERIES</a></li>
+        <li><a href="#videos">MOVIES</a></li>
+		<li> <a href="#service">SERVICES</a></li>
+    </ul>
+    
+</header>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Swiper Container -->
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img src="C:\Users\Manish Kumar Yadav\OneDrive\Desktop\project 01\img\home1.png" style="width:100%" height="740">
+      <div class="home-text">
+        <h1>DHOOM-3</h1>
+		<a href="C:\Users\Manish Kumar Yadav\OneDrive\Desktop\project 01\img\video\Dhoom Machale Dhoom Full Song (DHOOM 3) - (1080p HD) (BollywoodHD.in).mp4" class="btn">Watch Now</a>
+        <a href="C:\Users\Manish Kumar Yadav\OneDrive\Desktop\project 01\img\video\Dhoom Machale Dhoom Full Song (DHOOM 3) - (1080p HD) (BollywoodHD.in).mp4" class="play">
+          <i class="bx bx-play"></i>
+        </a>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <img src="./img/home2.png" style="width:100%" height="740">
+      <div class="home-text">
+        <h1> DON-2 </h1>
+        <a href="C:\Users\Manish Kumar Yadav\OneDrive\Desktop\project 01\img\video\Don_2_2011_Hindi_Full_Movie_BDRip.mp4" class="btn">Watch Now</a>
+        <a href="C:\Users\Manish Kumar Yadav\OneDrive\Desktop\project 01\img\video\Don_2_2011_Hindi_Full_Movie_BDRip.mp4" class="play">
+          <i class="bx bx-play"></i>
+        </a>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <img src="C:\Users\Manish Kumar Yadav\OneDrive\Desktop\project 01\img\home3.png" style="width:100%" height="740">
+      <div class="home-text">
+        <h1>Student of <br>the year</h1>
+        <a href="C:\Users\Manish Kumar Yadav\OneDrive\Desktop\project 01\img\video\Student_of_the_Year_2_2019_Hindi_Full_Movie_HDRip.mp4" class="btn">Watch Now</a>
+        <a href="C:\Users\Manish Kumar Yadav\OneDrive\Desktop\project 01\img\video\Student_of_the_Year_2_2019_Hindi_Full_Movie_HDRip.mp4" class="play">
+          <i class="bx bx-play"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Swiper Pagination -->
+  <div class="swiper-pagination"></div>
+</div>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".swiper-container", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    loop: true,
+    effect: 'slide',  // smooth sliding effect
+  });
+</script>
+  
+
+<ul><li><a href="#new-release"></a></li></ul>
+
+<div class="movie-recommendations" id="new-release">
+    <h2 class="new">NEW RELEASE</h2>
+    <div class="movie-containers">
+        <div class="movie-item"><img src="C:\Users\Manish Kumar Yadav\OneDrive\Desktop\project 01\img\m1.jpg" alt="", height="400px", width="300"></div>
+        <div class="movie-item"><img src="C:\Users\Manish Kumar Yadav\OneDrive\Desktop\project 01\img\m2.jpg" alt="", height="400px", width="300"></div>
+        <div class="movie-item"><img src="C:\Users\Manish Kumar Yadav\OneDrive\Desktop\project 01\img\m3.jpg" alt="", height="400px", width="300"></div>
+        <div class="movie-item"><img src="C:\Users\Manish Kumar Yadav\OneDrive\Desktop\project 01\img\m4.jpg" alt="", height="400px", width="300"></div>
+        <div class="movie-item"><img src="C:\Users\Manish Kumar Yadav\OneDrive\Desktop\project 01\img\m5.jpg" alt="", height="400px", width="300"></div>
+    </div>
+</div>
+
+
+<!----- SERIES GRID-->
+<ul><li><a href="#series"></a></li></ul>
+<div class="series-container" id="series">
+	<h2>Latest Web Series</h2>
+  
+	<div class="series-grid">
+	  <!-- Web series 1 -->
+	  <div class="series-item">
+		<img src="C:\Users\Manish Kumar Yadav\OneDrive\Desktop\project 01\img\series1.png" alt="Series 1">
+		<div class="series-info">
+		  <h3>MIRZAPUR</h3>
+		  <p>Must watch</p>
+		  <a href="#" class="watch-now-btn">Subscribe to<br>Watch Now</a>
+		</div>
+	  </div>
+
+	  <div class="series-item">
+		<img src="C:\Users\Manish Kumar Yadav\OneDrive\Desktop\project 01\img\series2.png" alt="Series 1">
+		<div class="series-info">
+		  <h3>PILL</h3>
+		  <p>Must watch</p>
+		  <a href="#" class="watch-now-btn">Subscribe to<br>Watch Now</a>
+		</div>
+	  </div>
+
+	  <div class="series-item">
+		<img src="C:\Users\Manish Kumar Yadav\OneDrive\Desktop\project 01\img\series3.png" alt="Series 1">
+		<div class="series-info">
+		  <h3>LOKI</h3>
+		  <p>Must watch</p>
+		  <a href="#" class="watch-now-btn">Subscribe to<br>Watch Now</a>
+		</div>
+	  </div>
+
+	  <div class="series-item">
+		<img src="C:\Users\Manish Kumar Yadav\OneDrive\Desktop\project 01\img\series4.png" alt="Series 1">
+		<div class="series-info">
+		  <h3>MONEY-HEIST</h3>
+		  <p>Must watch</p>
+		  <a href="#" class="watch-now-btn">Subscribe to<br>Watch Now</a>
+		</div>
+	  </div>
+  
+	  <!-- Web series 2 -->
+	  <div class="series-item">
+		<img src="C:\Users\Manish Kumar Yadav\OneDrive\Desktop\project 01\img\series5.png" alt="Series 2">
+		<div class="series-info">
+		  <h3>THE FAMILY MAN</h3>
+		  <p>must watch</p>
+		  <a href="#" class="watch-now-btn">Subscribe to<br>Watch Now</a>
+		</div>
+	  </div>
+  
+	  
+	  <!-- More series can be added here -->
+  
+	</div>
+  
+	<!-- View All Button -->
+	<div class="view-all-container">
+	  <button class="view-all-btn">View All</button>
+	</div>
+  </div>
+
+
+<!-- movies  -->
+<ul><li><a href="#videos"></a></li></ul>
+<section class="movies" id="videos">
+	<h2 class="heading">MOVIES</h2>
+	<!-- movies container  -->
+	<div class="movie-container">
+		<!-- box-1  -->
+		<div class="box">
+			<div class="box-img">
+				<img src="./img/m1.jpg" alt="" />
+			</div>
+			<h3>Dr.Strange</h3>
+			<span>120 min | Action</span>
+		</div>
+
+		<!-- box-2  -->
+		<div class="box">
+			<div class="box-img">
+				<img src="./img/m2.jpg" alt="" />
+			</div>
+			<h3>Pathan</h3>
+			<span>120 min | Action</span>
+		</div>
+
+		<!-- box-3  -->
+		<div class="box">
+			<div class="box-img">
+				<img src="./img/m3.jpg" alt="" />
+			</div>
+			<h3>Batman vs Superman</h3>
+			<span>120 min | Thriller</span>
+		</div>
+
+		<!-- box-4  -->
+		<div class="box">
+			<div class="box-img">
+				<img src="./img/m4.jpg" alt="" />
+			</div>
+			<h3>John Wick 2</h3>
+			<span>120 min | Adventure</span>
+		</div>
+
+		<!-- box-5  -->
+		<div class="box">
+			<div class="box-img">
+				<img src="./img/m5.jpg" alt="" />
+			</div>
+			<h3>Aquaman</h3>
+			<span>120 min | Action</span>
+		</div>
+
+		<!-- box-6  -->
+		<div class="box">
+			<div class="box-img">
+				<img src="./img/m6.jpg" alt="" />
+			</div>
+			<h3>Black Panther</h3>
+			<span>120 min | Thriller</span>
+		</div>
+
+		<!-- box-7  -->
+		<div class="box">
+			<div class="box-img">
+				<img src="./img/m7.jpg" alt="" />
+			</div>
+			<h3>Uncharted</h3>
+			<span>120 min | Adventure</span>
+		</div>
+
+		<!-- box-8  -->
+		<div class="box">
+			<div class="box-img">
+				<img src="./img/m8.jpg" alt="" />
+			</div>
+			<h3>Brahmastra</h3>
+			<span>120 min | Action</span>
+		</div>
+
+		<!-- box-9  -->
+		<div class="box">
+			<div class="box-img">
+				<img src="./img/m9.jpg" alt="" />
+			</div>
+			<h3>Mortal-Engines</h3>
+			<span>120 min | Action</span>
+		</div>
+
+		<!-- box-10  -->
+		<div class="box">
+			<div class="box-img">
+				<img src="./img/m10.jpg" alt="" />
+			</div>
+			<h3>Mortal-Engines</h3>
+			<span>120 min | Action</span>
+		</div>
+
+		<!-- box-11  -->
+		<div class="box">
+			<div class="box-img">
+				<img src="./img/m5.jpg" alt="" />
+			</div>
+			<h3>Aquaman</h3>
+			<span>120 min | Action</span>
+		</div>
+
+		<!-- box-12 -->
+		<div class="box">
+			<div class="box-img">
+				<img src="./img/m6.jpg" alt="" />
+			</div>
+			<h3>Black Panther</h3>
+			<span>120 min | Thriller</span>
+		</div>
+
+		<!-- box-13 -->
+		<div class="box">
+			<div class="box-img">
+				<img src="./img/m7.jpg" alt="" />
+			</div>
+			<h3>Uncharted</h3>
+			<span>120 min | Adventure</span>
+		</div>
+
+		<!-- box-14 -->
+		<div class="box">
+			<div class="box-img">
+				<img src="./img/m8.jpg" alt="" />
+			</div>
+			<h3>Brahmastra</h3>
+			<span>120 min | Action</span>
+		</div>
+	</div>
+</section>
+
+
+<!-- services -->
+ 
+<ul><li><a href="#service"></a></li></ul>
+<section class="service" id="service">
+
+<!--css-->
+
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+			}
+			.container {
+				width: 90%;
+				margin: 20px auto;
+			}
+			.accordion {
+				background-color: #ffffff;
+				color: #000000;
+				cursor: pointer;
+				padding: 10px 18px;
+				width: 100%;
+				border: none;
+				outline: none;
+				text-align: left;
+				font-size: 18px;
+				transition: 0.4s;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.accordion.active, .accordion:hover {
+				background-color: #009688;
+			}
+			.panel {
+				padding: 0 18px;
+				display: none;
+				background-color: white;
+				overflow: hidden;
+			}
+			.icon {
+				font-size: 18px;
+				font-weight: bold;
+			}
+		</style>
+		
+		<!--HTML-->
+	</head>
+	<body>
+		<div class="container">
+			<h1>Our Services</h1>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+			<button class="accordion"><span><i class="fas fa-video"></i>Movie Production</span><span class="icon">+</span></button>
+			<div class="panel">
+				<p><strong>Pre-production:</strong> Scriptwriting, Storyboarding, Casting, Location Scouting.</p>
+				<p><strong>Production:</strong> On-set filming with state-of-the-art equipment and experienced crew.</p>
+				<p><strong>Post-production:</strong> Editing, Visual Effects (VFX), Sound Design, Color Grading.</p>
+				<p><strong>Distribution Assistance:</strong> Theatrical release planning, streaming services, film festivals.</p>
+			</div>
+	
+			<button class="accordion"><span><i class="fas fa-film"></i> Short Film Production</span><span class="icon">+</span></button>
+			<div class="panel">
+				<p><strong>Concept Development:</strong> Tailored scripts for short-form storytelling.</p>
+				<p><strong>High-Quality Filming:</strong> Fast, efficient shoots without compromising on creativity.</p>
+				<p><strong>Editing & Post-production:</strong> Complete editing services, including sound design and color correction.</p>
+				<p><strong>Festival Submission Support:</strong> Guidance on submitting to prestigious short film festivals.</p>
+			</div>
+	
+			<button class="accordion"><span><i class="fas fa-theater-masks"></i> Cinema Distribution</span><span class="icon">+</span></button>
+			<div class="panel">
+				<p><strong>Strategic Planning:</strong> Tailored distribution strategies for cinemas.</p>
+				<p><strong>Theatrical Bookings:</strong> Partnerships with theaters for nationwide releases.</p>
+				<p><strong>Streaming and Online Distribution:</strong> Maximize visibility through digital platforms.</p>
+				<p><strong>Marketing & Publicity Support:</strong> Campaigns to engage audiences before release.</p>
+			</div>
+	
+			<button class="accordion"><span><i class="fas fa-bullhorn"></i> Film Marketing</span><span class="icon">+</span></button>
+			<div class="panel">
+				<p><strong>Marketing Strategy:</strong> Comprehensive campaigns to boost film visibility.</p>
+				<p><strong>Social Media Promotion:</strong> Utilizing platforms like Instagram, Facebook, and Twitter for targeted marketing.</p>
+				<p><strong>Public Relations:</strong> Media outreach, interviews, and press releases to generate buzz.</p>
+				<p><strong>Merchandise and Branding:</strong> Creating brand-related products for fans.</p>
+			</div>
+	
+			<button class="accordion"><span><i class="fas fa-hashtag"></i> Social Media Content Creation</span><span class="icon">+</span></button>
+			<div class="panel">
+				<p><strong>Custom Content Development:</strong> Videos, graphics, and images tailored for social platforms.</p>
+				<p><strong>Content Calendars:</strong> Strategic content planning to align with film release dates.</p>
+				<p><strong>Platform Management:</strong> Managing accounts across Instagram, Twitter, Facebook, TikTok.</p>
+				<p><strong>Influencer Collaborations:</strong> Partnering with influencers for film promotion.</p>
+			</div>
+	
+			<button class="accordion"><span><i class="fas fa-bullseye"></i> Ad Campaign Development</span><span class="icon">+</span></button>
+			<div class="panel">
+				<p><strong>Creative Conceptualization:</strong> Unique and compelling ad ideas for films and events.</p>
+				<p><strong>Multi-platform Ads:</strong> Digital, print, TV, and social media advertisements.</p>
+				<p><strong>Performance Tracking:</strong> Monitoring ad effectiveness and reach to adjust strategy.</p>
+				<p><strong>A/B Testing:</strong> Ensuring the best message reaches the audience through data-driven insights.</p>
+			</div>
+	
+			<button class="accordion"><span><i class="fas fa-calendar-alt"></i> Event Planning & Management</span><span class="icon">+</span></button>
+			<div class="panel">
+				<p><strong>Film Premieres:</strong> Red carpet events, media coverage, and guest management.</p>
+				<p><strong>Screenings & Q&As:</strong> Organizing special screenings with directors and actors.</p>
+				<p><strong>Press Events:</strong> Media engagements, interviews, and conferences.</p>
+				<p><strong>After-parties & Galas:</strong> Full event coordination, including entertainment and décor.</p>
+			</div>
+	
+			<button class="accordion"><span><i class="fas fa-chalkboard-teacher"></i> Film Academy</span><span class="icon">+</span></button>
+			<div class="panel">
+				<p><strong>Workshops & Masterclasses:</strong> Hands-on sessions with industry professionals.</p>
+				<p><strong>Certification Courses:</strong> Practical training in film production, direction, and acting.</p>
+				<p><strong>Internship Opportunities:</strong> Real-world experience on film sets.</p>
+				<p><strong>Networking Events:</strong> Meet and learn from experts in the entertainment industry.</p>
+			</div>
+	
+			<button class="accordion"><span><i class="fas fa-tv"></i> Web Series Development</span><span class="icon">+</span></button>
+			<div class="panel">
+				<p><strong>End-to-End Production:</strong> From scriptwriting to final editing.</p>
+				<p><strong>Platform Partnerships:</strong> Collaborations with streaming services for distribution.</p>
+				<p><strong>Episodic Storytelling:</strong> Expert guidance on writing and producing binge-worthy series.</p>
+				<p><strong>Pilot Development:</strong> Creating compelling pilot episodes to pitch to networks.</p>
+			</div>
+		</div>
+
+
+	<!-- Javascript-->
+
+
+		<script>
+			const accordions = document.querySelectorAll(".accordion");
+	
+			accordions.forEach((accordion) => {
+				accordion.addEventListener("click", function () {
+					this.classList.toggle("active");
+					const panel = this.nextElementSibling;
+					const icon = this.querySelector(".icon");
+	
+					if (panel.style.display === "block") {
+						panel.style.display = "none";
+						icon.textContent = "+";
+					} else {
+						panel.style.display = "block";
+						icon.textContent = "-";
+					}
+				});
+			});
+		</script>
+	</section>
+</main>
+
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Magic Moon Studios</h4>
+            <ul>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#my-profile">My Profile</a></li>
+                <li><a href="#pricing-plans">Pricing Plans</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Browse</h4>
+            <ul>
+                <li><a href="#latest-movies">Latest Movies</a></li>
+                <li><a href="#upcoming-movies">Upcoming Movies</a></li>
+                <li><a href="#latest-series">Latest Series</a></li>
+                <li><a href="#videos">Videos</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <ul class="social-media">
+                <li><a href="#facebook"><i class='bx bxl-facebook'></i></a></li>
+                <li><a href="#twitter"><i class='bx bxl-twitter'></i></a></li>
+                <li><a href="#instagram"><i class='bx bxl-instagram'></i></a></li>
+                <li><a href="#youtube"><i class='bx bxl-youtube'></i></a></li>
+            </ul>
+            <p>Email: ranveer30654@gmail.com</p>
+            <p>Phone: 8539841479</p>
+        </div>
+
+        <!-- Map Section -->
+        <div class="footer-section">
+            <h4>Find Us</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.5968168699587!2d77.617842474668!3d13.124708887204902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae19a05fb6ba83%3A0x213e2c1c59bb9ad6!2sBrindavan%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1728235831034!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2024 Magic Moon Studios | All Rights Reserved.</p>
+    </div>
+</footer>
+
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+	  
+	</body>
+</html>
+
+
